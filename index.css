@@ -7,6 +7,9 @@
     width: 100px;
 }
 
+.body{
+    margin: 0% 10%;
+}
 .nav-items {
     padding: 0px 20px;
 }
@@ -26,15 +29,24 @@
     display: flex;
     flex-wrap: wrap;
 }
+.res-logo{
+    border-radius: 16px;
+}
 .res-card{
     margin: 5px;
     width: 200px;
-    background-color: #f0f0f0;
     padding: 5px;
+}
+.res-card-list{
+    background-color: #ffffff;
 }
 .res-card:hover{
     cursor: pointer;
-    border: 1px solid black;
+    /* border: 1px solid black; */
+    width: 180px;
+    margin: 8px;
+    background-color: #ffffff;
+    transition: all 0.05s ease 0s;
 
 }
 .Filter{
