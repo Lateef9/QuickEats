@@ -21,11 +21,12 @@ const Body = () => {
     );
     let jsondata = await data.json();
     setListOfRestaurents(
-      jsondata?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      jsondata?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
     setfilteredRestaurants(
-      jsondata?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      jsondata?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
+    console.log(jsondata)
   };
   
   if(filteredRestaurants === null) return <Shimmer />
