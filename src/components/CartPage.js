@@ -12,7 +12,7 @@ const CartPage = () =>{
 
     return (
     <div className="text-center">
-        <h1 className="text-2xl font-bold"> Ctfghvgvhjvjhart</h1>
+        <h1 className="text-2xl font-bold">{}</h1>
         <div className="w-6/12 m-auto">
             <button className="p-2 m-2 bg-black text-white rounded-lg"
             onClick={handleClearcart}> Clear Cart</button>

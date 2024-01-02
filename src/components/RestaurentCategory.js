@@ -1,5 +1,7 @@
 import { useState } from "react";
 import ItemList from "./ItemList";
+import { IoIosArrowDown } from "react-icons/io";
+import { IoIosArrowUp } from "react-icons/io";
 
 const RestaurentCategory = ({data}) =>{
 
@@ -18,7 +20,7 @@ const RestaurentCategory = ({data}) =>{
             <div className="flex justify-between cursor-pointer"
                  onClick={handleClick}>
                 <span className="text-lg font-bold"> {data.title} ({data.itemCards.length})</span>
-                <span>⬇️</span>
+                <span>{showItems ? <IoIosArrowDown className="py-auto text-xl"/> :<IoIosArrowUp className="py-auto text-xl"/> }</span>
             </div>
 
             <div>
