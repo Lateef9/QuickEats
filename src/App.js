@@ -8,7 +8,7 @@ import RestaurentMenu from "./components/RestaurentMenu";
 import { createBrowserRouter, RouterProvider,Outlet} from "react-router-dom";
 import { Provider } from "react-redux";
 import appStore from "./Utils/appStore";
-import CartPage from "./components/cartPage";
+import CartPage from "./components/CartPage";
 
 
 // const About = lazy(() => import("./components/About"));

@@ -17,8 +17,7 @@ const Body = () => {
 
   const fetchData = async () => {
     const data = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.966957&lng=79.151817&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
-    );
+        "https://corsproxy.org/?https%3A%2F%2Fwww.swiggy.com%2Fdapi%2Frestaurants%2Flist%2Fv5%3Flat%3D12.966957%26lng%3D79.151817%26is-seo-homepage-enabled%3Dtrue%26page_type%3DDESKTOP_WEB_LISTING"    );
     let jsondata = await data.json();
     setListOfRestaurents(
       jsondata?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
@@ -26,12 +25,12 @@ const Body = () => {
     setfilteredRestaurants(
       jsondata?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
-    console.log(jsondata)
+    // console.log(jsondata)
   };
   
   if(filteredRestaurants === null) return <Shimmer />
  
-  console.log(ListOfRestaurants);
+  // console.log(ListOfRestaurants);
 
   return (
     <div className=""> 
@@ -44,7 +43,7 @@ const Body = () => {
               setsearchText(e.target.value);
             }}
           />
-          <button className="font-semibold bg-blue-300 m-4 px-4 py-1 rounded-md"
+          <button className="font-semibold bg-orange-400 m-4 px-4 py-1 rounded-md"
             onClick={() => {
               const searchedList = ListOfRestaurants.filter((res) =>
                 res.info.name.toLowerCase().includes(searchText.toLowerCase())
@@ -77,7 +76,7 @@ const Body = () => {
         {filteredRestaurants?.map((restaurant) => {
           return (
            <Link to={"/restaurents/"+ restaurant.info.id}> 
-           {restaurant.info.promoted ? <RestaurantCardPromoted resData ={restaurant.info}/> : <RestaurentCard key={restaurant.info.id} {...restaurant.info} /> }
+           {restaurant.info.promoted ? <RestaurantCardPromoted key={restaurant.info.id} resData ={restaurant.info}/> : <RestaurentCard key={restaurant.info.id} {...restaurant.info} /> }
             
            </Link>
           );

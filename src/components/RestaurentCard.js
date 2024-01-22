@@ -1,5 +1,6 @@
 import { CDN_URL } from "../Utils/constant";
 import { CiStar } from "react-icons/ci";
+import { FaStar } from "react-icons/fa";
 
 
 const RestaurentCard = (props) => {
@@ -17,14 +18,13 @@ const RestaurentCard = (props) => {
           className="rounded-2xl"
           src={
             CDN_URL +  cloudinaryImageId
-          }
+          } 
         />
         <div className="res-card-list">
-        <h2 className="font-semibold truncate">{name}</h2>
-        <h4 className="flex items-center"><CiStar className=" bg-green mr-2" /> {avgRating} stars</h4>
-        <h4 className="truncate">{cuisines.join(", ")}</h4>
-        <h4>{areaName}</h4>
-        <h4>{sla.deliveryTime + " min"}</h4>
+        <h2 className="font-semibold  truncate">{name}</h2>
+        <h4 className="flex items-center font-semibold"><FaStar className="text-green-600 mr-1 font-bold h-8"/>{avgRating } •  {sla.deliveryTime + " min"}</h4>
+        <h4 className="truncate font-light">{cuisines.join(", ")}</h4>
+        <h4 className="font-light ">{areaName}</h4>
         
         {/* <h4>{costForTwoString}</h4> */}
         </div>
