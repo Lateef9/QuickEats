@@ -15,7 +15,7 @@ const CartPage = () =>{
 
     const handleremoveItem =(item) =>{
         dispatch(removeItem(item.card.info.id))
-        toast.error('Removed from the Cart', {
+        toast.success('Removed from the Cart', {
             className : "font-ProximaNovaSemiBold",
             position : "top-center",
             duration : 1500

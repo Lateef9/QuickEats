@@ -1,5 +1,4 @@
 import { CDN_URL } from "../Utils/constant";
-import { CiStar } from "react-icons/ci";
 import { FaStar } from "react-icons/fa";
 
 

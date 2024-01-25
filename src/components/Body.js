@@ -1,5 +1,4 @@
 import RestaurentCard ,{PromotedRestaurentCard} from "./RestaurentCard";
-import Shimmer from "./Shimmer";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
@@ -55,7 +54,7 @@ const Body = () => {
             Search
           </button>
         </div>
-        <div className="items-center m-4 py-1 px-5">
+        {/* <div className="items-center m-4 py-1 px-5">
           <button
             onClick={() => {
               const filteredList = ListOfRestaurants.filter(
@@ -67,7 +66,7 @@ const Body = () => {
           >
             Filter Restaurent
           </button>
-        </div>
+        </div> */}
       </div>
       
       
