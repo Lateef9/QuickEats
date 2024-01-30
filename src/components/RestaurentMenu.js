@@ -1,13 +1,14 @@
 import { Params, useParams } from "react-router-dom";
 import getRestaurentMenu from "../Utils/getRestaurentMenu";
 import RestaurentCategory from "./RestaurentCategory";
+import Shimmer from "./Shimmer.js"
 
 const RestaurentMenu = () => {
   const { resId } = useParams();
   const resInfo = getRestaurentMenu(resId);
 
   if (resInfo === null) return <Shimmer />;
-
+  console.log(resInfo);
   const {
     locality,
     name,
@@ -19,6 +20,7 @@ const RestaurentMenu = () => {
     veg,
     sla: { deliveryTime },
   } = resInfo?.cards?.[0]?.card?.card?.info;
+  
   const { itemCards } =
     resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card;
 
